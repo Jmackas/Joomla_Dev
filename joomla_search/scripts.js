@@ -11,7 +11,8 @@ function extensionInterface() {
 
     // Get the project in an instance that is safe
     function initiateInterface() {
-        console.log("hello");
-        //let searchPageCheck = document.querySelectorAll(".body.site.com_search.view-search");
+        // Remove the unecessary search functions
+        let searchPageCheck = document.querySelector(".only").remove();
+
     }
 }
