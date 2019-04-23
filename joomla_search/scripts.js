@@ -25,14 +25,29 @@ function extensionInterface() {
 
         // Add initial table
         function addTable() {
-            var tableCreate = document.querySelector('.search-results');
-            // Create the table
-            tableCreate.insertAdjacentHTML('afterbegin', '<table id="generatedTable"><tbody><tr><td id="titleRes"></td><td id="unitOutlineRes"></td><td id="textRes"></td></tr></tbody></table>');
-
             // Determine the amount of columns
-            var amountOfColumns = document.querySelector('.badge-info').innerHTML;
+            let amountOfColumns = document.querySelector('.badge-info').innerHTML;
             amountOfColumns = parseInt(amountOfColumns);
 
+            let tableCreate = document.querySelector('.search-results');
+
+            // Create the bottom of the table
+            tableCreate.insertAdjacentHTML('afterbegin', '</tbody></table>')
+
+            /*
+
+
+The below loop is broken
+
+
+
+*/
+
+            for (let i = 1; i < amountOfColumns; i++) {
+                tableCreate.insertAdjacentHTML('afterbegin', '<tr><td id="titleRes">x</td><td id="unitOutlineRes">x</td><td id="textRes">x</td></tr>');
+            }
+
+            tableCreate.insertAdjacentHTML('afterbegin', '<table id="generatedTable"><tbody>');
         }
 
         // Add the titles to the table
