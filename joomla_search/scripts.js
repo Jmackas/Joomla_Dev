@@ -26,7 +26,22 @@ function extensionInterface() {
         // Add initial table
         function addTable() {
             var tableCreate = document.querySelector('.search-results');
+            // Create the table
             tableCreate.insertAdjacentHTML('afterbegin', '<table id="generatedTable"><tbody><tr><td id="titleRes"></td><td id="unitOutlineRes"></td><td id="textRes"></td></tr></tbody></table>');
+            
+            // Determine the amount of columns
+            var amountOfColumns = document.querySelector('.badge-info').innerHTML;
+            amountOfColumns = parseInt(amountOfColumns);
+            
+            
+            
+        }
+        
+        // Add the titles to the table
+        function addTitle() {
+            let searchFirstCol = document.querySelectorAll("#generatedTable #titleRes");
+            
+
         }
     }
 }
