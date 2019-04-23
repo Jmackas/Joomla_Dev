@@ -26,7 +26,7 @@ function extensionInterface() {
         // Add initial table
         function addTable() {
             var tableCreate = document.querySelector('.search-results');
-            tableCreate.insertAdjacentHTML('afterbegin', '<div id="two">two</div>');
+            tableCreate.insertAdjacentHTML('afterbegin', '<table id="generatedTable"><tbody><tr><td id="titleRes"></td><td id="unitOutlineRes"></td><td id="textRes"></td></tr></tbody></table>');
         }
     }
 }
