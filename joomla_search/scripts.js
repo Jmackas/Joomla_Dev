@@ -1,10 +1,10 @@
 extensionInterface();
 
 function extensionInterface() {
-    // Fetching function page
+    // Fetching search page
     let searchPageCheck = document.getElementById("searchForm");
 
-    // Check if user is on grade page
+    // Check if user is on search page
     if (searchPageCheck !== null) {
         initiateInterface();
     }
