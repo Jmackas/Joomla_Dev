@@ -15,7 +15,6 @@ function extensionInterface() {
     function initiateInterface() {
         // Remove the unecessary search functions
         let searchPageCheck = document.querySelector(".only").remove();
-
     }
 
     // Push the results to tables
