@@ -15,4 +15,9 @@ function extensionInterface() {
         let searchPageCheck = document.querySelector(".only").remove();
 
     }
+
+    // Push the results to tables
+    function resultsToTables() {
+
+    }
 }
