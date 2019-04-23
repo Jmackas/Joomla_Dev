@@ -6,7 +6,9 @@ function extensionInterface() {
 
     // Check if user is on search page
     if (searchPageCheck !== null) {
+        // Invoke the relevant functions
         initiateInterface();
+        resultsToTables();
     }
 
     // Get the project in an instance that is safe
@@ -18,6 +20,13 @@ function extensionInterface() {
 
     // Push the results to tables
     function resultsToTables() {
+        // Invoke the relevant functions
+        addTable();
 
+        // Add initial table
+        function addTable() {
+            var tableCreate = document.querySelector('.search-results');
+            tableCreate.insertAdjacentHTML('afterbegin', '<div id="two">two</div>');
+        }
     }
 }
