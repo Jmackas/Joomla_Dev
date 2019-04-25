@@ -7,14 +7,36 @@ function extensionInterface() {
     // Check if user is on search page
     if (searchPageCheck !== null) {
         // Invoke the relevant functions
+        loadAllResults();
         initiateInterface();
         resultsToTables();
+
     }
 
     // Get the project in an instance that is safe
     function initiateInterface() {
         // Remove the unecessary search functions
         let searchPageCheck = document.querySelector(".only").remove();
+    }
+
+    // Changes the URL to ensure all results are loaded automatically
+    function loadAllResults() {
+        let oldPageURL = window.location.href;
+
+        // If else to determine if the URL displays all values
+        if (oldPageURL.includes("all&limit=0") == false) {
+            let newPageURL = window.location.href;
+
+            // Cut out the part of the URL that needs to be changed
+            oldPageURL = oldPageURL.slice(-12);
+
+            // Generate the new URL
+            newPageURL = newPageURL.replace(oldPageURL, "all&limit=0");
+
+            // Generate the new page URL
+            window.location.replace(newPageURL);
+        }
+
     }
 
     // Push the results to tables
@@ -112,7 +134,7 @@ function extensionInterface() {
         // Remove the old search results
         function removeOldResults() {
             let oldSearchResults = document.querySelector("dl.search-results").remove();
-            
+
         }
 
         // Lazy way of loading styles pertinant to this script only
