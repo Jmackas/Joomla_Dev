@@ -8,15 +8,8 @@ function extensionInterface() {
     if (searchPageCheck !== null) {
         // Invoke the relevant functions
         loadAllResults();
-        initiateInterface();
         resultsToTables();
 
-    }
-
-    // Get the project in an instance that is safe
-    function initiateInterface() {
-        // Remove the unecessary search functions
-        let searchPageCheck = document.querySelector(".only").remove();
     }
 
     // Changes the URL to ensure all results are loaded automatically
@@ -131,9 +124,14 @@ function extensionInterface() {
             }
         }
 
-        // Remove the old search results
+        // Remove of various nodes
         function removeOldResults() {
-            let oldSearchResults = document.querySelector("dl.search-results").remove();
+            // Remove the previous search results
+            document.querySelector("dl.search-results").remove();
+            // Remove the form limit
+            document.querySelector(".form-limit").remove();
+            // Remove the unecessary search functions
+            let searchPageCheck = document.querySelector(".only").remove();
 
         }
 
