@@ -24,6 +24,7 @@ function extensionInterface() {
         addTitleContent();
         addUnitOutlineContent();
         addDescriptionContent();
+        lazyLoadStyles()
 
         // Add initial table
         function addTable() {
@@ -105,6 +106,13 @@ function extensionInterface() {
                 // Add the old search results to the new table
                 searchCol[i].innerHTML = oldSearchResults[i].innerHTML;
             }
+        }
+
+        // Lazy way of loading styles pertinant to this script only
+        function lazyLoadStyles() {
+
+            let entireDoc = document.querySelector('body');
+            entireDoc.insertAdjacentHTML('beforebegin', '<style>#generatedTable td {border: 1px solid #e5e5e5;padding: 10px;}</style>');
         }
 
     }
