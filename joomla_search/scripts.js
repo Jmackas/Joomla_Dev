@@ -77,6 +77,7 @@ function extensionInterface() {
                 let oldSearchResults = document.querySelectorAll(".result-title");
                 // Add the old search results to the new table
                 searchCol[i].innerHTML = oldSearchResults[i].innerHTML;
+
             }
         }
 
