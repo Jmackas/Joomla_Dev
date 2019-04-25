@@ -21,7 +21,7 @@ function extensionInterface() {
     function resultsToTables() {
         // Invoke the relevant functions
         addTable();
-        addTitle()
+        addTitleContent()
 
         // Add initial table
         function addTable() {
@@ -50,7 +50,7 @@ function extensionInterface() {
                     // cell2.setAttribute('id', 'unitOutlineRes');
                     //cell3.setAttribute('id', 'textRes');
                 }
-                
+
                 // Add the title text into the top row
                 let titleCellTitle = document.querySelector("#generatedTable tr td:nth-of-type(1)");
                 titleCellTitle.innerHTML = "Title";
@@ -66,9 +66,17 @@ function extensionInterface() {
         }
 
         // Add the titles to the table
-        function addTitle() {
+        function addTitleContent() {
+            // Select all the columns in the generated table
             let searchFirstCol = document.querySelectorAll("#generatedTable td:nth-of-type(1)");
 
+            // Loop through all the columns, get data, and add it to the new columns
+            for (let i = 1; i < searchFirstCol.length; i++) {
+                let oldSearchResults = document.querySelectorAll(".result-title");
+                // Add the old search results to the new table
+                searchFirstCol[i].innerHTML = oldSearchResults[i].innerHTML;
+            }
         }
+        
     }
 }
