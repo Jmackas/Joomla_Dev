@@ -24,7 +24,8 @@ function extensionInterface() {
         addTitleContent();
         addUnitOutlineContent();
         addDescriptionContent();
-        lazyLoadStyles()
+        removeOldResults();
+        lazyLoadStyles();
 
         // Add initial table
         function addTable() {
@@ -106,6 +107,12 @@ function extensionInterface() {
                 // Add the old search results to the new table
                 searchCol[i].innerHTML = oldSearchResults[i].innerHTML;
             }
+        }
+
+        // Remove the old search results
+        function removeOldResults() {
+            let oldSearchResults = document.querySelector("dl.search-results").remove();
+            
         }
 
         // Lazy way of loading styles pertinant to this script only
