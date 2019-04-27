@@ -78,7 +78,7 @@ function extensionInterface() {
                 // Add the unit outline text into the top row
                 let unitOutlineCellTitle = document.querySelector("#generatedTable tr td:nth-of-type(1)");
                 unitOutlineCellTitle.innerHTML = "<strong>Unit Outline</strong>";
-                
+
                 // Add the description to the top row of the table
                 let descriptionCellTitle = document.querySelector("#generatedTable tr td:nth-of-type(3)");
                 descriptionCellTitle.innerHTML = "<strong>Description</strong>";
@@ -133,7 +133,10 @@ function extensionInterface() {
             // Remove the form limit
             document.querySelector(".form-limit").remove();
             // Remove the unecessary search functions
-            let searchPageCheck = document.querySelector(".only").remove();
+            document.querySelector(".only").remove();
+            // Remove the unecessary sort function
+            document.querySelector(".ordering-box").remove();
+            
 
         }
 
