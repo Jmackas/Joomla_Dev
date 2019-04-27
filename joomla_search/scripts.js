@@ -41,6 +41,7 @@ function extensionInterface() {
         addDescriptionContent();
         removeOldResults();
         lazyLoadStyles();
+        downloadTableResults();
 
         // Add initial table
         function addTable() {
@@ -133,6 +134,17 @@ function extensionInterface() {
             // Remove the unecessary search functions
             let searchPageCheck = document.querySelector(".only").remove();
 
+        }
+
+        // Ability to download the table of results
+        function downloadTableResults() {
+            // Select the generated table
+           let tableCreate = document.querySelector('#generatedTable');
+
+            // Insert the button for downloading the button
+            tableCreate.insertAdjacentHTML('beforebegin', '<button id="downloadTable">Download Results</button>')
+
+            
         }
 
         // Lazy way of loading styles pertinant to this script only
