@@ -72,29 +72,16 @@ function extensionInterface() {
                 }
 
                 // Add the title text into the top row
-                let titleCellTitle = document.querySelector("#generatedTable tr td:nth-of-type(1)");
+                let titleCellTitle = document.querySelector("#generatedTable tr td:nth-of-type(2)");
                 titleCellTitle.innerHTML = "<strong>Title</strong>";
 
                 // Add the unit outline text into the top row
-                let unitOutlineCellTitle = document.querySelector("#generatedTable tr td:nth-of-type(2)");
+                let unitOutlineCellTitle = document.querySelector("#generatedTable tr td:nth-of-type(1)");
                 unitOutlineCellTitle.innerHTML = "<strong>Unit Outline</strong>";
-
+                
                 // Add the description to the top row of the table
                 let descriptionCellTitle = document.querySelector("#generatedTable tr td:nth-of-type(3)");
                 descriptionCellTitle.innerHTML = "<strong>Description</strong>";
-            }
-        }
-
-        // Add the titles to the table
-        function addTitleContent() {
-            // Select all the columns in the generated table
-            let searchCol = document.querySelectorAll("#generatedTable td:nth-of-type(1)");
-
-            // Loop through all the columns, get data, and add it to the new columns
-            for (let i = 1; i < searchCol.length; i++) {
-                let oldSearchResults = document.querySelectorAll(".result-title");
-                // Add the old search results to the new table
-                searchCol[i].innerHTML = oldSearchResults[i].innerHTML;
 
             }
         }
@@ -102,13 +89,27 @@ function extensionInterface() {
         // Add the unit outlines to the table
         function addUnitOutlineContent() {
             // Select all the columns in the generated table
-            let searchCol = document.querySelectorAll("#generatedTable td:nth-of-type(2)");
+            let searchCol = document.querySelectorAll("#generatedTable td:nth-of-type(1)");
 
             // Loop through all the columns, get data, and add it to the new columns
             for (let i = 1; i < searchCol.length; i++) {
                 let oldSearchResults = document.querySelectorAll(".result-category");
                 // Add the old search results to the new table
                 searchCol[i].innerHTML = oldSearchResults[i].innerHTML;
+            }
+        }
+
+        // Add the titles to the table
+        function addTitleContent() {
+            // Select all the columns in the generated table
+            let searchCol = document.querySelectorAll("#generatedTable td:nth-of-type(2)");
+
+            // Loop through all the columns, get data, and add it to the new columns
+            for (let i = 1; i < searchCol.length; i++) {
+                let oldSearchResults = document.querySelectorAll(".result-title");
+                // Add the old search results to the new table
+                searchCol[i].innerHTML = oldSearchResults[i].innerHTML;
+
             }
         }
 
