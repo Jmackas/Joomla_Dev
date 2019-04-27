@@ -134,7 +134,7 @@ function extensionInterface() {
             document.querySelector(".form-limit").remove();
             // Remove the unecessary search functions
             document.querySelector(".only").remove();
-            // Remove the unecessary sort function
+            // Remove the unecessary sort button
             document.querySelector(".ordering-box").remove();
             
 
