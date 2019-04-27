@@ -142,7 +142,7 @@ function extensionInterface() {
             let tableCreate = document.querySelector('#generatedTable');
 
             // Insert the button for downloading the button
-            tableCreate.insertAdjacentHTML('beforebegin', '<button id="downloadTable">Download Results</button>')
+            tableCreate.insertAdjacentHTML('beforebegin', '<button id="downloadTable" class="btn">Download Results</button><br><br>')
 
             // Create the CSV attribute
             function download_csv(csv, filename) {
