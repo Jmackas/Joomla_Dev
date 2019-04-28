@@ -239,12 +239,22 @@ function extensionInterface() {
             for (let i = 1; i < searchCol.length; i++) {
                 let oldSearchResults = document.querySelectorAll(".result-category");
                 // Add the old search results to the new table
-                
+
                 // Add elements to array
-                searchColArr.push(searchCol[i])
+                searchColArr.push(searchCol[i].innerText);
 
             }
-            
+
+            var sorted_array = searchColArr.slice().sort();
+
+            var arrayColOutcome = [];
+            for (var i = 0; i < sorted_array.length - 1; i++) {
+                if (sorted_array[i + 1] == sorted_array[i]) {
+                    arrayColOutcome.push(sorted_array[i]);
+                }
+            }
+
+            console.log(arrayColOutcome[0]);
 
         }
 
