@@ -12,7 +12,6 @@ function extensionInterface() {
         loadAllResults();
         resultsToTables();
         lazyLoadStyles();
-        removeDuplicateUO();
 
     }
 
@@ -221,10 +220,6 @@ function extensionInterface() {
 
         }
 
-    }
-
-    function removeDuplicateUO() {
-        console.log("test");
     }
 
     // Lazy way of loading styles pertinant to this script only
