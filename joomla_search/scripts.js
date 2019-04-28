@@ -225,6 +225,13 @@ function extensionInterface() {
 
     // The function that facilitates the sorting of the table
     function sortResults() {
+        // Invoke relevant functions
+        deleteDupUO();
+
+        function deleteDupUO() {
+            
+        }
+
     }
 
     // Lazy way of loading styles pertinant to this script only
