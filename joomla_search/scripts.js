@@ -11,6 +11,7 @@ function extensionInterface() {
         // Invoke the relevant functions
         loadAllResults();
         resultsToTables();
+        sortResults();
         lazyLoadStyles();
 
     }
@@ -157,7 +158,7 @@ function extensionInterface() {
 
             // Insert filter to have unique unit outlines
             tableCreate.insertAdjacentHTML('afterend', '<label class="radio"><input type="radio" id="uniqueUO">Unique Unit Outlines Only</label><br>');
-            
+
             // Insert HR
             tableCreate.insertAdjacentHTML('afterend', '<hr>');
 
@@ -220,6 +221,10 @@ function extensionInterface() {
 
         }
 
+    }
+
+    // The function that facilitates the sorting of the table
+    function sortResults() {
     }
 
     // Lazy way of loading styles pertinant to this script only
