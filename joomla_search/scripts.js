@@ -40,7 +40,7 @@ function extensionInterface() {
         addTitleContent();
         addUnitOutlineContent();
         addDescriptionContent();
-        removeOldResults();
+        addRemoveNodes();
         downloadTableResults();
 
         // Add initial table
@@ -126,8 +126,13 @@ function extensionInterface() {
             }
         }
 
-        // Remove of various nodes
-        function removeOldResults() {
+        // Removal and Creation of various nodes
+        function addRemoveNodes() {
+            /*
+
+            Removals
+
+            */
             // Remove the previous search results
             document.querySelector("dl.search-results").remove();
             // Remove the form limit
@@ -136,6 +141,12 @@ function extensionInterface() {
             document.querySelector(".only").remove();
             // Remove the unecessary sort button
             document.querySelector(".ordering-box").remove();
+
+            /*
+
+            Creations
+
+            */
 
         }
 
