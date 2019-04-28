@@ -229,7 +229,23 @@ function extensionInterface() {
         deleteDupUO();
 
         function deleteDupUO() {
+            // Select all the columns in the generated table
+            let searchCol = document.querySelectorAll("#generatedTable td:nth-of-type(1)");
+
+            // Create array for values
+            var searchColArr = [];
+
+            // Loop through all the columns, get data, and add it to the new columns
+            for (let i = 1; i < searchCol.length; i++) {
+                let oldSearchResults = document.querySelectorAll(".result-category");
+                // Add the old search results to the new table
+                
+                // Add elements to array
+                searchColArr.push(searchCol[i])
+
+            }
             
+
         }
 
     }
