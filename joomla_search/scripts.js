@@ -9,6 +9,7 @@ function extensionInterface() {
         // Invoke the relevant functions
         loadAllResults();
         resultsToTables();
+        lazyLoadStyles();
 
     }
 
@@ -40,7 +41,6 @@ function extensionInterface() {
         addUnitOutlineContent();
         addDescriptionContent();
         removeOldResults();
-        lazyLoadStyles();
         downloadTableResults();
 
         // Add initial table
