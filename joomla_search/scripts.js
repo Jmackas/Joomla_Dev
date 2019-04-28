@@ -136,7 +136,6 @@ function extensionInterface() {
             document.querySelector(".only").remove();
             // Remove the unecessary sort button
             document.querySelector(".ordering-box").remove();
-            
 
         }
 
@@ -202,12 +201,12 @@ function extensionInterface() {
 
         }
 
-        // Lazy way of loading styles pertinant to this script only
-        function lazyLoadStyles() {
+    }
 
-            let entireDoc = document.querySelector('body');
-            entireDoc.insertAdjacentHTML('beforebegin', '<style>#generatedTable td {border: 1px solid #e5e5e5;padding: 10px;}</style>');
-        }
+    // Lazy way of loading styles pertinant to this script only
+    function lazyLoadStyles() {
 
+        let entireDoc = document.querySelector('body');
+        entireDoc.insertAdjacentHTML('beforebegin', '<style>#generatedTable td {border: 1px solid #e5e5e5;padding: 10px;}</style>');
     }
 }
