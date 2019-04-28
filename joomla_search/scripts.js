@@ -252,9 +252,15 @@ function extensionInterface() {
                 if (sorted_array[i + 1] == sorted_array[i]) {
                     arrayColOutcome.push(sorted_array[i]);
                 }
+
             }
 
-            console.log(arrayColOutcome[0]);
+//             for (let i = 0; i < searchCol.length; i++) {
+//                 arrayColOutcome.toString;
+
+//                 var n = arrayColOutcome.indexOf("hello");
+                
+//             }
 
         }
 
