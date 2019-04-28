@@ -153,12 +153,13 @@ function extensionInterface() {
             let tableCreate = document.querySelector('.phrases');
 
             // Insert the button for downloading the button
-            tableCreate.insertAdjacentHTML('afterend', '<button id="downloadTable" class="btn">Download Results</button><br><br>')
+            tableCreate.insertAdjacentHTML('afterend', '<button id="downloadTable" class="btn">Download Results</button><br><br>');
 
             // Insert filter to have unique unit outlines
-            tableCreate.insertAdjacentHTML('afterend', '<label class="radio"><input type="radio" id="uniqueUO">Unique Unit Outlines Only</label><br>')
+            tableCreate.insertAdjacentHTML('afterend', '<label class="radio"><input type="radio" id="uniqueUO">Unique Unit Outlines Only</label><br>');
+            
             // Insert HR
-            tableCreate.insertAdjacentHTML('afterend', '<hr>')
+            tableCreate.insertAdjacentHTML('afterend', '<hr>');
 
         }
 
