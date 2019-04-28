@@ -149,7 +149,13 @@ function extensionInterface() {
             */
             // Select the generated table
             let tableCreate = document.querySelector('#generatedTable');
-            
+
+            // Insert HR
+            tableCreate.insertAdjacentHTML('beforebegin', '<hr>')
+
+            // Insert filter to have unique unit outlines
+            tableCreate.insertAdjacentHTML('beforebegin', '<label class="radio"><input type="radio" id="uniqueUO">Unique Unit Outlines Only</label><br>')
+
             // Insert the button for downloading the button
             tableCreate.insertAdjacentHTML('beforebegin', '<button id="downloadTable" class="btn">Download Results</button><br><br>')
 
@@ -164,7 +170,7 @@ function extensionInterface() {
                 let downloadLink;
 
                 // CSV FILE
-                csvFile = new Blob([csv], {
+                csvFile = new Blob([csv],{
                     type: "text/csv"
                 });
 
@@ -192,8 +198,8 @@ function extensionInterface() {
                 var rows = document.querySelectorAll("table tr");
 
                 for (var i = 0; i < rows.length; i++) {
-                    var row = [],
-                        cols = rows[i].querySelectorAll("td, th");
+                    var row = []
+                      , cols = rows[i].querySelectorAll("td, th");
 
                     for (var j = 0; j < cols.length; j++)
                         row.push(cols[j].innerText);
@@ -205,7 +211,7 @@ function extensionInterface() {
                 download_csv(csv.join("\n"), filename);
             }
 
-            document.querySelector("#downloadTable").addEventListener("click", function () {
+            document.querySelector("#downloadTable").addEventListener("click", function() {
                 var html = document.querySelector("table").outerHTML;
                 export_table_to_csv(html, "table.csv");
             });
