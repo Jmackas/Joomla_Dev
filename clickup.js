@@ -6,8 +6,8 @@ document.addEventListener("keydown", function(e) {
 }, false);
 
 
-//document.head.insertAdjacentHTML("beforeend", `<style>.cu-comment__body-container {height: 300px;overflow: auto;}</style>`)
-
+document.head.insertAdjacentHTML("beforeend", `<style>.cu-comment__body-container {height: 200px;overflow: auto;}</style>`)
+/*
 setTimeout(commentHeight, 3000);
 
 function commentHeight() {
@@ -29,5 +29,5 @@ for (let i = 0; i < comment.length; i++) {
 
 }
 
-
+*/
 
