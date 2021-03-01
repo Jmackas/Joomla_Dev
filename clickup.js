@@ -8,7 +8,10 @@ document.addEventListener("keydown", function(e) {
 
 //document.head.insertAdjacentHTML("beforeend", `<style>.cu-comment__body-container {height: 300px;overflow: auto;}</style>`)
 
-let comment = document.querySelectorAll(".cu-comment__body-container");
+setTimeout(commentHeight, 3000);
+
+function commentHeight() {
+  let comment = document.querySelectorAll(".cu-comment__body-container");
 
 for (let i = 0; i < comment.length; i++) {
     // Determine the height of all comments
@@ -23,5 +26,8 @@ for (let i = 0; i < comment.length; i++) {
     }
 
 }
+
+}
+
 
 
