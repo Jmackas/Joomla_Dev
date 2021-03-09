@@ -1,6 +1,6 @@
 
 
-function labInjection() {
+
 
   console.log("This Works!");
     // Identifier on screen
