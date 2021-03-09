@@ -1,4 +1,4 @@
-setTimeout(labInjection, 1000);
+
 
 function labInjection() {
 
@@ -28,4 +28,3 @@ function labInjection() {
 
     }
 
-}
